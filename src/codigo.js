@@ -46,11 +46,52 @@ class Carrito {
         this.productos.push(producto);
     } 
 }
+
+class Categoria {
+    constructor(nombreCategoria){
+        this.nombreCategoria=nombreCategoria;
+        this.productos = [];
+    }
+
+    get getNombreCategoria(){
+       return this.nombreCategoria;
+    }
+
+    set setNombreCategoria(nombreCategoria){
+        this.nombreCategoria= nombreCategoria;
+    }
+
+    asociarProducto(producto){
+       this.productos.push(producto);
+    }
+
+}
+
 //Prueba 1 Augusto
 const producto1 = new Producto("Cubo rubik","Moyu","abc123","Cubo rubik 3x3x3","Entretenimiento",1360);
-module.exports = producto1.getPrecio();
+const precio = producto1.getPrecio();
 //Prueba 2 Augusto
 const producto2 = new Producto("Mouse gaming","Red Dragon","cba321","Mouse para gamers","Tecnologia",5893);
 const carrito1 = new Carrito();
-carrito1.agregarProducto(producto2)
-module.exports = carrito1.productos.length;
+carrito1.agregarProducto(producto2);
+const cantidadCarrito = carrito1.productos.length;
+
+// Prueba Santi
+const producto3 = new Producto("SmartPhone Motog20", "Motorola", "#4536ts", "Celular inteligente", "Tecnología", 21000);
+const categoria = new Categoria("SmartPhones");
+categoria.asociarProducto(producto3);
+const cantidadCategoria= categoria.productos.length;
+//Prueba 2 Santi
+const longitudNombre = producto3.nombre.length;
+
+
+
+//Objeto que contiene los datos a probar
+ const functions = {
+    precio,
+    cantidadCarrito,
+    cantidadCategoria,
+    longitudNombre
+}
+
+module.exports=functions;

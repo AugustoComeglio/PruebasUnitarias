@@ -14,19 +14,19 @@ describe('Pruebas para sumas', () => {
 })
 */
 const { it } = require('@jest/globals');
-//Tst 1
-const getPrecio = require('../src/codigo.js');
+//Test 1
+functions = require('../src/codigo.js');
 describe('Prueba precio distinto de 0',() => {
     it('Demostrar precio distinto de 0', () => {
-        expect(getPrecio).not.toBe(0);
+        expect(functions.precio).not.toBe(0);
     });
 });
 
 //Test 2
-const carrito1 = require('../src/codigo.js');
+functions = require('../src/codigo.js');
 describe('Prueba carrito no vacio',() => {
     it('Demostrar que el carrito no esta vacio', () => {
-        expect(carrito1).not.toBe(0);
+        expect(functions.cantidadCarrito).not.toBe(0);
     });
 });
 
