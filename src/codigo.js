@@ -95,3 +95,6 @@ const longitudNombre = producto3.nombre.length;
 }
 
 module.exports=functions;
+
+
+//AUGUSTO SOS UN NASHEEEE AAHHHH
