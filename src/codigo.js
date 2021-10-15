@@ -7,13 +7,14 @@ module.exports = Suma;
 */
 
 class Producto {
-    constructor(nombre,marca,codigo,descripcion,categoria,precio){
+    constructor(nombre,marca,codigo,descripcion,categoria,precio,stock){
         this.nombre = nombre;
         this.marca = marca;
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.precio = precio;
+        this.stock = stock;
     }  
     getPrecio() {
         return this.precio 
@@ -84,6 +85,15 @@ const cantidadCategoria= categoria.productos.length;
 //Prueba 2 Santi
 const longitudNombre = producto3.nombre.length;
 
+// Prueba Gonzalo
+const productGonza = new Producto("SmartPhone Motog20", "Motorola", "#4536ts", "Celular inteligente", "Tecnología", 21000, 10);
+const actualStock = productGonza.stock;
+const decrementStock = (stock, numberItems) => {
+    return (stock - numberItems);
+}
+const incrementStock = (stock, numberItems) => {
+    return (stock + numberItems);
+}
 
 
 //Objeto que contiene los datos a probar
@@ -91,7 +101,10 @@ const longitudNombre = producto3.nombre.length;
     precio,
     cantidadCarrito,
     cantidadCategoria,
-    longitudNombre
+    longitudNombre,
+    actualStock,
+    decrementStock,
+    incrementStock
 }
 
 module.exports=functions;
