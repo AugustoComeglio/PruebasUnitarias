@@ -110,6 +110,13 @@ const carritoFernando = new Carrito();
 carritoFernando.agregarProducto(producto2);
 const detalleCarrito = carritoFernando.detalle;
 
+// Prueba Facundo 1
+const productoFacundo = new Producto("240G", "HP", "#252356", "Notebook All in One", "Tecnología", 50000 ,8);
+const cantidadDescripcion = productoFacundo.descripcion.length;
+
+// Prueba Facundo 2
+const precioProductoFacundo = productoFacundo.precio;
+
 //Objeto que contiene los datos a probar
  const functions = {
     precio,
@@ -120,7 +127,9 @@ const detalleCarrito = carritoFernando.detalle;
     decrementStock,
     incrementStock,
     codigo,
-    detalleCarrito
+    detalleCarrito,
+    cantidadDescripcion,
+    precioProductoFacundo
 }
 
 module.exports=functions;
