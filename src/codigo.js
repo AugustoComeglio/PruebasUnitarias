@@ -86,7 +86,7 @@ const cantidadCategoria= categoria.productos.length;
 const longitudNombre = producto3.nombre.length;
 
 // Prueba Gonzalo
-const productGonza = new Producto("SmartPhone Motog20", "Motorola", "#4536ts", "Celular inteligente", "Tecnología", 21000, 10);
+const productGonza = new Producto("Iphone 13 Pro Max", "Apple", "#131313", "Celular inteligente", "Tecnología", 120000, 10);
 const actualStock = productGonza.stock;
 const decrementStock = (stock, numberItems) => {
     return (stock - numberItems);
