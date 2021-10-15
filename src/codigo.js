@@ -24,7 +24,10 @@ class Producto {
 
 class Carrito {
     constructor(){
-        this.detalle = undefined;
+        this.detalle = {
+            precioTotal: "",
+            iva: "" 
+        };
         this.total = undefined;
         this.productos = [];
     }
@@ -45,7 +48,10 @@ class Carrito {
     }
     agregarProducto(producto){
         this.productos.push(producto);
+        this.detalle.precioTotal = this.detalle.precioTotal + producto.precio;
+        this.detalle.iva = "21";
     } 
+    
 }
 
 class Categoria {
@@ -95,6 +101,14 @@ const incrementStock = (stock, numberItems) => {
     return (stock + numberItems);
 }
 
+// Prueba Fernando 1
+const productFernando = new Producto("G7", "Motorola", "#131313", "Celular inteligente", "Tecnología", 6000, 5);
+const codigo = productFernando.codigo;
+
+// Prueba Fernando 2
+const carritoFernando = new Carrito();
+carritoFernando.agregarProducto(producto2);
+const detalleCarrito = carritoFernando.detalle;
 
 //Objeto que contiene los datos a probar
  const functions = {
@@ -104,7 +118,9 @@ const incrementStock = (stock, numberItems) => {
     longitudNombre,
     actualStock,
     decrementStock,
-    incrementStock
+    incrementStock,
+    codigo,
+    detalleCarrito
 }
 
 module.exports=functions;
