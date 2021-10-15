@@ -67,6 +67,23 @@ class Categoria {
 
 }
 
+class Cliente{
+    constructor( nombreCliente ){
+        this.nombreCliente = nombreCliente;
+        this.productoSeleccionado = [];
+    }
+
+    get getNombreCliente(){
+        return this.nombreCliente;
+    }
+
+    set setNombreCliente(nombreCliente){
+        this.nombreCliente = nombreCliente;
+    }
+
+    
+}
+
 //Prueba 1 Augusto
 const producto1 = new Producto("Cubo rubik","Moyu","abc123","Cubo rubik 3x3x3","Entretenimiento",1360);
 const precio = producto1.getPrecio();
@@ -84,6 +101,10 @@ const cantidadCategoria= categoria.productos.length;
 //Prueba 2 Santi
 const longitudNombre = producto3.nombre.length;
 
+// Prueba 1 Fernando
+const productoFer = new Producto("Camiseta de River", "Adidas", "STFG123", "La mejor camiseta de todos los tiempos", "Entretenimiento", 8000);
+const productoSeleccionado = productoFer.get
+// Prueba 2 Fernando
 
 
 //Objeto que contiene los datos a probar
