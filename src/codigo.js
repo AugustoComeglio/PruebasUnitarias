@@ -20,6 +20,10 @@ class Producto {
         return this.precio 
     }
 
+    getCategoria(){
+        return this.categoria;
+    }
+
 }
 
 class Carrito {
@@ -74,6 +78,19 @@ class Categoria {
 
 }
 
+class Envio {
+    constructor(provincia, localidad, codPostal, precioEnvio){
+        this.provincia = provincia;
+        this.localidad = localidad;
+        this.codPostal = codPostal;
+        this.precioEnvio = precioEnvio;
+    }
+
+    getPrecioEnvio(){
+        return this.precioEnvio;
+    }
+}
+
 //Prueba 1 Augusto
 const producto1 = new Producto("Cubo rubik","Moyu","abc123","Cubo rubik 3x3x3","Entretenimiento",1360);
 const precio = producto1.getPrecio();
@@ -117,6 +134,14 @@ const cantidadDescripcion = productoFacundo.descripcion.length;
 // Prueba Facundo 2
 const precioProductoFacundo = productoFacundo.precio;
 
+// Prueba Julieta 1
+const productoJulieta = new Producto("Monitor Curvo 27", 'Samsung', '#22655656', 'Este monitor de 27" te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad', 'Monitores' , 20000, 63);
+const prodCategoriaJuli = productoJulieta.getCategoria();
+
+// Prueba Julieta 2
+const envioJulieta = new Envio('Mendoza', 'Godoy Cruz', 5501, 250);
+const precioEnvioJulieta = envioJulieta.getPrecioEnvio();
+
 //Objeto que contiene los datos a probar
  const functions = {
     precio,
@@ -129,7 +154,9 @@ const precioProductoFacundo = productoFacundo.precio;
     codigo,
     detalleCarrito,
     cantidadDescripcion,
-    precioProductoFacundo
+    precioProductoFacundo,
+    prodCategoriaJuli,
+    precioEnvioJulieta
 }
 
 module.exports=functions;
